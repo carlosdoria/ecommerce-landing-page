@@ -24,7 +24,11 @@ export default function Index({
   sectionTech,
   sectionConcepts,
   sectionModules,
-  sectionCalendar
+  sectionCalendar,
+  pricingBox,
+  sectionAboutUs,
+  sectionReviews,
+  sectionFaq
 }: LandingPageProps) {
   return (
     <>
@@ -34,10 +38,10 @@ export default function Index({
       <SectionConcepts {...sectionConcepts} />
       <SectionModules {...sectionModules} />
       <SectionAgenda {...sectionCalendar} />
-      <PricingBox />
-      <SectionAboutUs />
-      <SectionReviews />
-      <SectionFaq />
+      <PricingBox {...pricingBox} />
+      <SectionAboutUs {...sectionAboutUs} />
+      <SectionReviews {...sectionReviews} />
+      <SectionFaq {...sectionFaq} />
       <Footer />
       <JsonSchema />
     </>

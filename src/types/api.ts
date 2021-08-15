@@ -56,6 +56,55 @@ export type SectionCalendarProps = {
   description: string
 }
 
+export type PricingBoxProps = {
+  totalPrice: number
+  numberInstallments: number
+  priceInstallment: number
+  benefits: Array<{
+    benefit: string
+  }>
+  button: {
+    label: string
+    url: string
+  }
+}
+
+export type SectionAboutUsProps = {
+  title: string
+  authors: Array<{
+    name: string
+    role: string
+    description: string
+    socialLinks: Array<{
+      title: string
+      url: string
+    }>
+    image: {
+      alternativeText: string
+      url: string
+    }
+  }>
+}
+
+export type SectionReviewsProps = {
+  title: string
+  reviews: Array<{
+    name: string
+    text: string
+    image: {
+      url: string
+    }
+  }>
+}
+
+export type SectionFaqProps = {
+  title: string
+  questions: Array<{
+    question: string
+    answer: string
+  }>
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
@@ -64,4 +113,8 @@ export type LandingPageProps = {
   sectionConcepts: SectionConceptsProps
   sectionModules: SectionModulesProps
   sectionCalendar: SectionCalendarProps
+  pricingBox: PricingBoxProps
+  sectionAboutUs: SectionAboutUsProps
+  sectionReviews: SectionReviewsProps
+  sectionFaq: SectionFaqProps
 }

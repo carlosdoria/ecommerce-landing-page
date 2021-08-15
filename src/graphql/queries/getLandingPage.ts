@@ -71,6 +71,63 @@ export const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment pricingBox on LandingPage {
+    pricingBox {
+      totalPrice
+      numberInstallments
+      priceInstallment
+      benefits {
+        benefit
+      }
+      button {
+        label
+        url
+      }
+    }
+  }
+
+  fragment sectionAboutUs on LandingPage {
+    sectionAboutUs {
+      title
+      authors {
+        name
+        role
+        description
+        socialLinks {
+          title
+          url
+        }
+        image {
+          alternativeText
+          url
+        }
+      }
+    }
+  }
+
+  fragment sectionReviews on LandingPage {
+    sectionReviews {
+      title
+      reviews {
+        name
+        text
+        image {
+          url
+        }
+      }
+    }
+  }
+
+  fragment sectionFaq on LandingPage {
+    sectionFaq {
+      title
+      questions {
+        question
+        answer
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -80,6 +137,10 @@ export const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionConcepts
       ...sectionModules
       ...sectionCalendar
+      ...pricingBox
+      ...sectionAboutUs
+      ...sectionReviews
+      ...sectionFaq
     }
   }
 `
